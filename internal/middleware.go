@@ -1,4 +1,4 @@
-package gologger
+package golog
 
 import (
 	"fmt"

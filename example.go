@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	gologger "github.com/K44Z/gologger/internal"
+	golog "github.com/K44Z/golog/internal"
 )
 
 func main() {
@@ -12,7 +12,7 @@ func main() {
 	mux.HandleFunc("POST /hello", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "wassup")
 	})
-	loggedMux := gologger.Log(mux)
+	loggedMux := golog.Log(mux)
 	fmt.Println("Server listening on http://localhost:8080")
 	http.ListenAndServe(":8080", loggedMux)
 }
