@@ -10,7 +10,7 @@ import (
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("POST /hello", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "wassup")
+		w.WriteHeader(100)
 	})
 	loggedMux := golog.Log(mux)
 	fmt.Println("Server listening on http://localhost:8080")

@@ -48,7 +48,7 @@ func getStatusColor(status int) string {
 func getMethodColor(method string) string {
 	switch method {
 	case "GET":
-		return Blue
+		return Cyan
 	case "POST":
 		return Green
 	case "PUT":

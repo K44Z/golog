@@ -32,7 +32,7 @@ func Log(next http.Handler) http.Handler {
 		duration := time.Since(start)
 		durationStr := formatDuration(duration)
 
-		fmt.Printf("%s[%s]%s %s%s%s %s%s%s %s%d%s %s%s%s\n",
+		fmt.Printf("%s%s%s | %s%s%s %s%s%s | %s%d%s | %s%s%s\n",
 			Gray, time.Now().Format("15:04:05"), Reset,
 			getMethodColor(r.Method), r.Method, Reset,
 			Bold, r.URL.Path, Reset,
